@@ -5,7 +5,7 @@
 #1 first eexercise -guess the rate of your 5 star accesory with number 
 
 guess = 45
-tries = input("Write a number: ")
+tries = int(input("Write a number: "))
 
 if tries == guess:
     print("Congratulations!")
@@ -15,4 +15,3 @@ else:
     print("A higher number")
 
 print("END")
-
