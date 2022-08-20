@@ -1,29 +1,39 @@
 # functions
+from asyncio import all_tasks
 import random
 num = 5
-def turn_akira():
-    yuhp = 100
-    atk = yuhp - random.randint(5,16)
-    print("Remain HP:",atk)
-    yuhp = atk
-def turn_yu():
-    akirahp = 100
-    atk1 = akirahp - random.randint(4,17)
-    print("Remain HP:",atk1)
-    akirahp = atk1   
-     
+yuhp = 100
+akirahp = 100
+   
 while True:
-    start = int(input("Write a number to start:"))
+    start = int(input("Write the number of the turn: "))
+    print("")
+    akira_atk= random.randint(5,16)
+    yu_atk= random.randint(4,17)
+    hp_remain_yu = yuhp - akira_atk
+    hp_remain_akira = akirahp - yu_atk
+    if akira_atk >10:
+        print("Crtical Hit from akira",akira_atk)
+        print("***************************")
+    elif yu_atk >10:
+        print("Crtical Hit from Yu",yu_atk)
+        print("***************************")
+    def turn_akira():
+        print(f"|Yu Remain HP:{hp_remain_yu}|")
+    def turn_yu():
+        print(f"|Akira Remain HP:{hp_remain_akira}|")
     turn_akira()
     turn_yu()
+    yuhp = hp_remain_yu
+    akirahp = hp_remain_akira
     ("---------------------")
-    if turn_yu<=0:
+    if akirahp<=0:
         print("Yu wins")
         break
-    elif turn_akira<=0:
+    elif yuhp<=0:
         print("Akira Wins")
         break
     else:
-        print("another round")
+        print("|another round|")
         continue
 print("--END--")
