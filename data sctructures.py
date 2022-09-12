@@ -1,11 +1,7 @@
-#list 
+#tuples
+yu_narukami = ("Izanagi","Mara","Yoshitsune") 
+akira = ("Arsene","Thor","Alice",yu_narukami)
 
-to_do = ["excel","You're BD","notions add","you're BD2"]
-
-print("How many activitys you have: ", len(to_do))
-to_do.append("Py_data")
-print(f"I selected: {to_do[4]}")
-del to_do[4]
-print(to_do)
-
-
+print(f"How many personas {akira} has: ", len(akira))
+print(akira)
+print(yu_narukami)
