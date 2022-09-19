@@ -1,7 +1,19 @@
-re_list = ["RE1","RE2","RE3","RE4","RE5"]
-name = "Resident Evil 6"
-print("List number 1 to final",re_list[:])
-print("List number final to first",re_list[::-1])
-print("Print the number 3",re_list[3])
-print("List number 1 to 4",re_list[1:4])
-print("Write the name from final to 1st letter: ", name[::-1])
+akira = set(("lilim","alice","arsene","jack frost"))
+yu = set(("izanagi","jack frost", "High pixie","Foul"))
+
+print(akira)
+print(yu)
+print("♦♦♦♦♦♦♦♦♦♦♦")
+print(akira | yu )
+print("♣♣♣♣♣♣♣♣♣♣♣")
+print(akira & yu )
+print("♠♠♠♠♠♠♠♠♠♠♠")
+print(akira - yu )
+
+akira.add("izanagi")
+akira.remove("arsene")
+yu.add("arsene")
+yu.remove("izanagi")
+
+print(akira)
+print(yu)
